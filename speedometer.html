@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Speedometer App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="speedometer">
+    <div class="dial"></div>
+    <div class="needle"></div>
+    <div class="speed-value">0</div> 
+  </div>
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const needle = document.querySelector(".needle");
+      const speedValue = document.querySelector(".speed-value");
+      const maxSpeed = 350; // Maximale snelheid op de snelheidsmeter
+
+      function setSpeed(speed) {
+        const rotation = (speed / maxSpeed) * 180 - 90;
+        needle.style.transform = `translate(-50%, 0) rotate(${rotation}deg)`;
+        speedValue.textContent = speed;
+      }
+
+      // Haal de snelheidswaarde uit de URL-querystring
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const speed = urlParams.get('speed');
+      if (speed !== null) {
+        // Controleer of de waarde geldig is
+        const parsedSpeed = parseInt(speed);
+        if (!isNaN(parsedSpeed)) {
+          // Stel de snelheid in als startwaarde
+          setSpeed(parsedSpeed);
+        }
+      }
+
+      // Hier word iedere 2 seconden (meer of minder naar keuze) de snelheid veranderd.
+      setInterval(() => {
+        const speed = Math.floor(Math.random() * (maxSpeed + 1));
+        setSpeed(speed);
+      }, 2000); h
+    });
+  </script>
+</body>
+</html>

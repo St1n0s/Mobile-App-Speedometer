@@ -1,0 +1,145 @@
+body {
+  background-color: lightgray;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;body {
+  background-color: lightgray;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: red;
+}
+
+.container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+input[type="number"],
+button[type="submit"] {
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: darkred;
+}
+
+button[type="submit"]:focus {
+  outline: none;
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+}
+
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+input[type="number"],
+button[type="submit"] {
+  padding-top: 10px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: darkred;
+}
+
+button[type="submit"]:focus {
+  outline: none;
+}
+
+button[type="submit"]:active {
+  transform: translateY(1px);
+}

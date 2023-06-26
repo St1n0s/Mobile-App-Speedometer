@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speedometer App</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Speedometer App</h1>
+    <p>Deze app stelt je in staat om een snelheidsmeter te simuleren met een display vergelijkbaar met een kilometerteller.</p>
+    <p>Voer hieronder een snelheidswaarde in en klik op "Start" om de snelheidsmeterwijzer te zien bewegen op basis van de ingevoerde waarde.</p>
+    <form action="speedometer.html">
+      <label for="speedInput">Voer snelheid in (km/h):</label>
+      <input type="number" id="speedInput" name="speed" required>
+      <button type="submit">Start</button>
+    </form>
+  </div>
+
+  <script>
+    // Verzend de snelheidswaarde in de URL-querystring bij het klikken op de "Start" knop
+    const form = document.querySelector('form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const speedInput = document.querySelector('#speedInput');
+      const speed = speedInput.value;
+      window.location.href = `speedometer.html?speed=${speed}`;
+    });
+  </script>
+</body>
+</html>
+
